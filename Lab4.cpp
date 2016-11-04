@@ -10,6 +10,7 @@ int** crearMatriz(int);
 void imprimirMatriz(int**);
 int** transposeNormal(int**);
 int** transposeInverse(int**);
+int** deleteEverything(int**);
 int main(){
 
 int** caraFrontal = crearMatriz(1);
@@ -245,12 +246,12 @@ int opcion = 0;
 				int random;
 				for (int i = 0; i < 15; ++i)
 				{
-					cout<<"Salir";
+					
 					random = rand() % 12 + 1;
 					cout<<random;
 					if(random==1){//F
 						int numero1,numero2,numero3,numero4;
-						cout<<"hey";
+						
 						for (int i = 0; i < 3; ++i)
 						{
 							numero1 = caraIzquierda[i][2];
@@ -429,21 +430,16 @@ int opcion = 0;
 					
 
 				}
-				cout<< "Cara Frontal"<<endl;
-					imprimirMatriz(caraFrontal);
-					cout<<endl<<"Cara Trasera"<<endl;
-					imprimirMatriz(caraTrasera);
-					cout<<endl<<"Cara Superior"<<endl;
-					imprimirMatriz(caraSuperior);
-					cout<<endl<<"Cara Inferior"<<endl;
-					imprimirMatriz(caraInferior);
-					cout<<endl<<"Cara Derecha"<<endl;
-					imprimirMatriz(caraDerecha);
-					cout<<endl<<"Cara Izquierda"<<endl;
-					imprimirMatriz(caraIzquierda);
+				
 				break;
 			}
 		}//Fin Switch 
+		caraFrontal = deleteEverything(caraFrontal);
+		caraTrasera = deleteEverything(caraTrasera);
+		caraSuperior = deleteEverything(caraSuperior);
+		caraInferior = deleteEverything(caraInferior);
+		caraDerecha = deleteEverything(caraDerecha);
+		caraIzquierda = deleteEverything(caraIzquierda);
 	}while(opcion>=0 && opcion <=2);//Fin do while
 	return 0;
 }
@@ -510,6 +506,12 @@ int** transposeInverse(int** matriz){
 	}
 	return matrix;
 }
-
-
-
+int** deleteEverything(int** matriz){
+	for (int i = 0; i < 3; ++i)
+	{
+		delete[] matriz[i];
+	    matriz[i]=NULL;
+	}
+	delete[] matriz;
+	return matriz;
+}
