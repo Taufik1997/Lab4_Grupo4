@@ -3,8 +3,8 @@
 
 using namespace std;
 
-int** crearMatriz(int x);
-void imprimirMatriz(int** matriz);
+int** crearMatriz(int);
+void imprimirMatriz(int**);
 
 int main(){
 
@@ -21,7 +21,29 @@ int opcion = 0;
 		cin>>opcion;
 		switch(opcion){
 			case 1:{
+				resp = s;
+				do{
+					string movimiento = "";
+					cout<< "Cara Frontal";
+					imprimirMatriz(caraFrontal);
+					cout<<endl<<"Cara Trasera";
+					imprimirMatriz(caraTrasera);
+					cout<<endl<<"Cara Superior";
+					imprimirMatriz(caraSuperior);
+					cout<<endl<<"Cara Inferior";
+					imprimirMatriz(caraInferior);
+					cout<<endl<<"Cara Derecha";
+					imprimirMatriz(caraDerecha);
+					cout<<endl<<"Cara Izquierda";
+					imprimirMatriz(caraIzquierda);
+					cout<<endl<<"Ingrese que movimiento quiere hacer:";
+					cin>>movimiento;
+					if(F){
+						
+					}
 
+
+				}while(resp == s);
 				break;
 			}
 			case 2:{
@@ -38,7 +60,11 @@ int** crearMatriz(int x){
 	matriz = new int*[3];
 	for (int i = 0; i < 3; ++i)
 	{
-		for (int i = 0; j < 3; ++j)
+		matriz[i] = new int[3];
+	}
+	for (int i = 0; i < 3; ++i)
+	{
+		for (int j = 0; j < 3; ++j)
 		{
 			matriz[i][j]= x;
 		}
