@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+#include <stdio.h>      /* printf, scanf, puts, NULL */
+#include <stdlib.h>     /* srand, rand */
+#include <time.h> 
 
 using namespace std;
 
@@ -239,6 +242,7 @@ int opcion = 0;
 				break;
 			}
 			case 2:{
+				int random;
 				
 				break;
 			}
