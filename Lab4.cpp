@@ -246,41 +246,183 @@ int opcion = 0;
 				for (int i = 0; i < 15; ++i)
 				{
 					random = rand() % 12 + 1;
-					if(random=1){
+					if(random=1){//F
+						int numero1,numero2,numero3,numero4;
 
+						for (int i = 0; i < 3; ++i)
+						{
+							numero1 = caraIzquierda[i][2];
+							numero2 =caraSuperior[2][i];
+							numero3 =caraDerecha[i][0];
+							numero4 =caraInferior[2][i];
+							caraSuperior[2][i] = numero1;
+							caraDerecha[i][0] = numero2;
+							caraInferior[2][i] = numero3;
+							caraIzquierda[i][2] = numero4;
+						}
 					}
 					if(random=2){
-
+						int numero1,numero2,numero3,numero4;
+						for (int i = 0; i < 3; ++i)
+						{
+							numero1 = caraIzquierda[i][2];
+							numero2 =caraSuperior[2][i];
+							numero3 =caraDerecha[i][0];
+							numero4 =caraInferior[2][i];
+							caraSuperior[2][i] = numero3;
+							caraDerecha[i][0] = numero4;
+							caraInferior[2][i] = numero1;
+							caraIzquierda[i][2] = numero2;
+						}
 					}
-					if(random=3){
-
+					if(random=3){//X
+						int numero1,numero2,numero3,numero4;
+						for (int i = 0; i < 3; ++i)
+						{
+							numero1 = caraIzquierda[i][0];
+							numero2 =caraSuperior[0][i];
+							numero3 =caraDerecha[i][2];
+							numero4 =caraInferior[0][i];
+							caraSuperior[0][i] = numero1;
+							caraDerecha[i][2] = numero2;
+							caraInferior[0][i] = numero3;
+							caraIzquierda[i][0] = numero4;
+						}
 					}
 					if(random=4){
-
+						int numero1,numero2,numero3,numero4;
+						for (int i = 0; i < 3; ++i)
+						{
+							numero1 = caraIzquierda[i][0];
+							numero2 =caraSuperior[0][i];
+							numero3 =caraDerecha[i][2];
+							numero4 =caraInferior[0][i];
+							caraSuperior[0][i] = numero3;
+							caraDerecha[i][2] = numero4;
+							caraInferior[0][i] = numero1;
+							caraIzquierda[i][0] = numero2;
+						}
 					}
-					if(random=5){
+					if(random=5){//U
+						int numero1,numero2,numero3,numero4;
 
+						for (int i = 0; i < 3; ++i)
+						{
+							numero1 = caraIzquierda[0][i];
+							numero2 =caraFrontal[0][i];
+							numero3 =caraDerecha[0][i];
+							numero4 =caraTrasera[0][i];
+							caraFrontal[0][i] = numero1;
+							caraDerecha[0][i] = numero2;
+							caraTrasera[0][i] = numero3;
+							caraIzquierda[0][i] = numero4;
+						}
 					}
 					if(random=6){
+						int numero1,numero2,numero3,numero4;
 
+						for (int i = 0; i < 3; ++i)
+						{
+							numero1 = caraIzquierda[0][i];
+							numero2 =caraFrontal[0][i];
+							numero3 =caraDerecha[0][i];
+							numero4 =caraTrasera[0][i];
+							caraFrontal[0][i] = numero3;
+							caraDerecha[0][i] = numero4;
+							caraTrasera[0][i] = numero1;
+							caraIzquierda[0][i] = numero2;
+						}
 					}
-					if(random=7){
+					if(random=7){//B
+						int numero1,numero2,numero3,numero4;
 
+						for (int i = 0; i < 3; ++i)
+						{
+							numero1 = caraIzquierda[2][i];
+							numero2 =caraFrontal[2][i];
+							numero3 =caraDerecha[2][i];
+							numero4 =caraTrasera[2][i];
+							caraFrontal[2][i] = numero1;
+							caraDerecha[2][i] = numero2;
+							caraTrasera[2][i] = numero3;
+							caraIzquierda[2][i] = numero4;
+						}
 					}
 					if(random=8){
+						int numero1,numero2,numero3,numero4;
 
+						for (int i = 0; i < 3; ++i)
+						{
+							numero1 = caraIzquierda[2][i];
+							numero2 =caraFrontal[2][i];
+							numero3 =caraDerecha[2][i];
+							numero4 =caraTrasera[2][i];
+							caraFrontal[2][i] = numero3;
+							caraDerecha[2][i] = numero4;
+							caraTrasera[2][i] = numero1;
+							caraIzquierda[2][i] = numero2;
+						}
 					}
-					if(random=9){
+					if(random=9){//R
+						int numero1,numero2,numero3,numero4;
 
+						for (int i = 0; i < 3; ++i)
+						{
+							numero1 = caraSuperior[i][2];
+							numero2 =caraTrasera[i][2];
+							numero3 =caraInferior[i][2];
+							numero4 =caraFrontal[i][2];
+							caraTrasera[i][2] = numero1;
+							caraInferior[i][2] = numero2;
+							caraFrontal[i][2] = numero3;
+							caraSuperior[i][2] = numero4;
+						}
 					}
 					if(random=10){
+						int numero1,numero2,numero3,numero4;
 
+						for (int i = 0; i < 3; ++i)
+						{
+							numero1 = caraSuperior[i][2];
+							numero2 =caraTrasera[i][2];
+							numero3 =caraInferior[i][2];
+							numero4 =caraFrontal[i][2];
+							caraTrasera[i][2] = numero3;
+							caraInferior[i][2] = numero4;
+							caraFrontal[i][2] = numero1;
+							caraSuperior[i][2] = numero2;
+						}
 					}
-					if(random=11){
-
+					if(random=11){//L
+						int numero1,numero2,numero3,numero4;
+						for (int i = 0; i < 3; ++i)
+						{
+							numero1 = caraSuperior[i][0];
+							numero2 =caraTrasera[i][0];
+							numero3 =caraInferior[i][0];
+							numero4 =caraFrontal[i][0];
+							caraTrasera[i][0] = numero1;
+							caraInferior[i][0] = numero2;
+							caraFrontal[i][0] = numero3;
+							caraSuperior[i][0] = numero4;
+						}
+						caraIzquierda=transposeNormal(caraIzquierda);
 					}
-					if(random=1){
+					if(random=12){
+						int numero1,numero2,numero3,numero4;
 
+						for (int i = 0; i < 3; ++i)
+						{
+							numero1 = caraSuperior[i][0];
+							numero2 =caraTrasera[i][0];
+							numero3 =caraInferior[i][0];
+							numero4 =caraFrontal[i][0];
+							caraTrasera[i][0] = numero3;
+							caraInferior[i][0] = numero4;
+							caraFrontal[i][0] = numero1;
+							caraSuperior[i][0] = numero2;
+						}
+						caraIzquierda=transposeInverse(caraIzquierda);
 					}
 				}
 				break;
