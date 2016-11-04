@@ -243,7 +243,46 @@ int opcion = 0;
 			}
 			case 2:{
 				int random;
-				
+				for (int i = 0; i < 15; ++i)
+				{
+					random = rand() % 12 + 1;
+					if(random=1){
+
+					}
+					if(random=2){
+
+					}
+					if(random=3){
+
+					}
+					if(random=4){
+
+					}
+					if(random=5){
+
+					}
+					if(random=6){
+
+					}
+					if(random=7){
+
+					}
+					if(random=8){
+
+					}
+					if(random=9){
+
+					}
+					if(random=10){
+
+					}
+					if(random=11){
+
+					}
+					if(random=1){
+
+					}
+				}
 				break;
 			}
 		}//Fin Switch 
