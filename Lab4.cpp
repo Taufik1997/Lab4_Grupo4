@@ -245,10 +245,12 @@ int opcion = 0;
 				int random;
 				for (int i = 0; i < 15; ++i)
 				{
+					cout<<"Salir";
 					random = rand() % 12 + 1;
-					if(random=1){//F
+					cout<<random;
+					if(random==1){//F
 						int numero1,numero2,numero3,numero4;
-
+						cout<<"hey";
 						for (int i = 0; i < 3; ++i)
 						{
 							numero1 = caraIzquierda[i][2];
@@ -261,7 +263,7 @@ int opcion = 0;
 							caraIzquierda[i][2] = numero4;
 						}
 					}
-					if(random=2){
+					if(random==2){
 						int numero1,numero2,numero3,numero4;
 						for (int i = 0; i < 3; ++i)
 						{
@@ -275,7 +277,7 @@ int opcion = 0;
 							caraIzquierda[i][2] = numero2;
 						}
 					}
-					if(random=3){//X
+					if(random==3){//X
 						int numero1,numero2,numero3,numero4;
 						for (int i = 0; i < 3; ++i)
 						{
@@ -289,7 +291,7 @@ int opcion = 0;
 							caraIzquierda[i][0] = numero4;
 						}
 					}
-					if(random=4){
+					if(random==4){
 						int numero1,numero2,numero3,numero4;
 						for (int i = 0; i < 3; ++i)
 						{
@@ -303,7 +305,7 @@ int opcion = 0;
 							caraIzquierda[i][0] = numero2;
 						}
 					}
-					if(random=5){//U
+					if(random==5){//U
 						int numero1,numero2,numero3,numero4;
 
 						for (int i = 0; i < 3; ++i)
@@ -318,7 +320,7 @@ int opcion = 0;
 							caraIzquierda[0][i] = numero4;
 						}
 					}
-					if(random=6){
+					if(random==6){
 						int numero1,numero2,numero3,numero4;
 
 						for (int i = 0; i < 3; ++i)
@@ -333,7 +335,7 @@ int opcion = 0;
 							caraIzquierda[0][i] = numero2;
 						}
 					}
-					if(random=7){//B
+					if(random==7){//B
 						int numero1,numero2,numero3,numero4;
 
 						for (int i = 0; i < 3; ++i)
@@ -348,7 +350,7 @@ int opcion = 0;
 							caraIzquierda[2][i] = numero4;
 						}
 					}
-					if(random=8){
+					if(random==8){
 						int numero1,numero2,numero3,numero4;
 
 						for (int i = 0; i < 3; ++i)
@@ -363,7 +365,7 @@ int opcion = 0;
 							caraIzquierda[2][i] = numero2;
 						}
 					}
-					if(random=9){//R
+					if(random==9){//R
 						int numero1,numero2,numero3,numero4;
 
 						for (int i = 0; i < 3; ++i)
@@ -378,7 +380,7 @@ int opcion = 0;
 							caraSuperior[i][2] = numero4;
 						}
 					}
-					if(random=10){
+					if(random==10){
 						int numero1,numero2,numero3,numero4;
 
 						for (int i = 0; i < 3; ++i)
@@ -393,7 +395,7 @@ int opcion = 0;
 							caraSuperior[i][2] = numero2;
 						}
 					}
-					if(random=11){//L
+					if(random==11){//L
 						int numero1,numero2,numero3,numero4;
 						for (int i = 0; i < 3; ++i)
 						{
@@ -408,7 +410,7 @@ int opcion = 0;
 						}
 						caraIzquierda=transposeNormal(caraIzquierda);
 					}
-					if(random=12){
+					if(random==12){
 						int numero1,numero2,numero3,numero4;
 
 						for (int i = 0; i < 3; ++i)
@@ -424,7 +426,21 @@ int opcion = 0;
 						}
 						caraIzquierda=transposeInverse(caraIzquierda);
 					}
+					
+
 				}
+				cout<< "Cara Frontal"<<endl;
+					imprimirMatriz(caraFrontal);
+					cout<<endl<<"Cara Trasera"<<endl;
+					imprimirMatriz(caraTrasera);
+					cout<<endl<<"Cara Superior"<<endl;
+					imprimirMatriz(caraSuperior);
+					cout<<endl<<"Cara Inferior"<<endl;
+					imprimirMatriz(caraInferior);
+					cout<<endl<<"Cara Derecha"<<endl;
+					imprimirMatriz(caraDerecha);
+					cout<<endl<<"Cara Izquierda"<<endl;
+					imprimirMatriz(caraIzquierda);
 				break;
 			}
 		}//Fin Switch 
