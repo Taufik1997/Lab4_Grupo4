@@ -15,7 +15,22 @@ int** caraInferior = crearMatriz(4);
 int** caraDerecha = crearMatriz(5);
 int** caraIzquierda = crearMatriz(6);
 
+int opcion = 0;
+	do{
+		cout<<"Menu\n1)Normal\n2)Scramble\n3)Salir\n";
+		cin>>opcion;
+		switch(opcion){
+			case 1:{
 
+				break;
+			}
+			case 2:{
+				
+				break;
+			}
+		}//Fin Switch 
+	}while(opcion>=0 && opcion <=3);//Fin do while
+	return 0;
 }
 
 int** crearMatriz(int x){
