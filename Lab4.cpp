@@ -58,6 +58,7 @@ int opcion = 0;
 							caraInferior[2][i] = numero3;
 							caraIzquierda[i][2] = numero4;
 						}
+						//caraFrontal=transposeNormal(caraFrontal);
 					}
 					if(movimiento == "f"){
 						int numero1,numero2,numero3,numero4;
@@ -72,6 +73,7 @@ int opcion = 0;
 							caraInferior[2][i] = numero1;
 							caraIzquierda[i][2] = numero2;
 						}
+						//caraFrontal=transposeInverse(caraFrontal);
 					}
 					if(movimiento == "X"){
 						int numero1,numero2,numero3,numero4;
@@ -86,6 +88,7 @@ int opcion = 0;
 							caraInferior[0][i] = numero3;
 							caraIzquierda[i][0] = numero4;
 						}
+						//caraTrasera=transposeNormal(caraTrasera);
 					}
 					if(movimiento == "x"){
 						int numero1,numero2,numero3,numero4;
@@ -100,6 +103,7 @@ int opcion = 0;
 							caraInferior[0][i] = numero1;
 							caraIzquierda[i][0] = numero2;
 						}
+					//	caraTrasera=transposeInverse(caraTrasera);
 					}
 
 					if(movimiento == "U"){
@@ -116,6 +120,7 @@ int opcion = 0;
 							caraTrasera[0][i] = numero3;
 							caraIzquierda[0][i] = numero4;
 						}
+					//	caraTrasera=transposeNormal(caraSuperior);
 					}
 					if(movimiento == "u"){
 						int numero1,numero2,numero3,numero4;
@@ -131,6 +136,7 @@ int opcion = 0;
 							caraTrasera[0][i] = numero1;
 							caraIzquierda[0][i] = numero2;
 						}
+					//	caraSuperior=transposeInverse(caraSuperior);
 					}
 					if(movimiento == "B"){
 						int numero1,numero2,numero3,numero4;
@@ -146,6 +152,7 @@ int opcion = 0;
 							caraTrasera[2][i] = numero3;
 							caraIzquierda[2][i] = numero4;
 						}
+					//	caraInferior=transposeNormal(caraInferior);
 					}
 					if(movimiento == "b"){
 						int numero1,numero2,numero3,numero4;
@@ -161,6 +168,7 @@ int opcion = 0;
 							caraTrasera[2][i] = numero1;
 							caraIzquierda[2][i] = numero2;
 						}
+					//	caraInferior=transposeInverse(caraInferior);
 					}
 					if(movimiento == "R"){
 						int numero1,numero2,numero3,numero4;
@@ -176,6 +184,7 @@ int opcion = 0;
 							caraFrontal[i][2] = numero3;
 							caraSuperior[i][2] = numero4;
 						}
+					//	caraDerecha=transposeNormal(caraDerecha);
 					}
 					if(movimiento == "r"){
 						int numero1,numero2,numero3,numero4;
@@ -191,6 +200,7 @@ int opcion = 0;
 							caraFrontal[i][2] = numero1;
 							caraSuperior[i][2] = numero2;
 						}
+					//	caraDerecha=transposeInverse(caraDerecha);
 					}
 					if(movimiento == "L"){
 						int numero1,numero2,numero3,numero4;
@@ -205,7 +215,7 @@ int opcion = 0;
 							caraFrontal[i][0] = numero3;
 							caraSuperior[i][0] = numero4;
 						}
-						caraIzquierda=transposeNormal(caraIzquierda);
+					//	caraIzquierda=transposeNormal(caraIzquierda);
 					}
 					
 					if(movimiento == "l"){
@@ -222,7 +232,7 @@ int opcion = 0;
 							caraFrontal[i][0] = numero1;
 							caraSuperior[i][0] = numero2;
 						}
-						caraIzquierda=transposeInverse(caraIzquierda);
+					//	caraIzquierda=transposeInverse(caraIzquierda);
 					}
 					cout<< "Cara Frontal"<<endl;
 					imprimirMatriz(caraFrontal);
@@ -248,7 +258,7 @@ int opcion = 0;
 				{
 					
 					random = rand() % 12 + 1;
-					cout<<random;
+					cout<<random<<" ";
 					if(random==1){//F
 						int numero1,numero2,numero3,numero4;
 						
@@ -409,7 +419,7 @@ int opcion = 0;
 							caraFrontal[i][0] = numero3;
 							caraSuperior[i][0] = numero4;
 						}
-						caraIzquierda=transposeNormal(caraIzquierda);
+					//	caraIzquierda=transposeNormal(caraIzquierda);
 					}
 					if(random==12){
 						int numero1,numero2,numero3,numero4;
@@ -425,7 +435,7 @@ int opcion = 0;
 							caraFrontal[i][0] = numero1;
 							caraSuperior[i][0] = numero2;
 						}
-						caraIzquierda=transposeInverse(caraIzquierda);
+					//	caraIzquierda=transposeInverse(caraIzquierda);
 					}
 					
 
@@ -434,17 +444,18 @@ int opcion = 0;
 				break;
 			}
 		}//Fin Switch 
-		caraFrontal = deleteEverything(caraFrontal);
-		caraTrasera = deleteEverything(caraTrasera);
-		caraSuperior = deleteEverything(caraSuperior);
-		caraInferior = deleteEverything(caraInferior);
-		caraDerecha = deleteEverything(caraDerecha);
-		caraIzquierda = deleteEverything(caraIzquierda);
+		
 	}while(opcion>=0 && opcion <=2);//Fin do while
+	caraFrontal = deleteEverything(caraFrontal);
+	caraTrasera = deleteEverything(caraTrasera);
+	caraSuperior = deleteEverything(caraSuperior);
+	caraInferior = deleteEverything(caraInferior);
+	caraDerecha = deleteEverything(caraDerecha);
+	caraIzquierda = deleteEverything(caraIzquierda);
 	return 0;
 }
 
-int** crearMatriz(int x){
+int** crearMatriz(int numero){
 	int **matriz;
 	matriz = new int*[3];
 	for (int i = 0; i < 3; ++i)
@@ -455,7 +466,7 @@ int** crearMatriz(int x){
 	{
 		for (int j = 0; j < 3; ++j)
 		{
-			matriz[i][j]= x;
+			matriz[i][j]= numero;
 		}
 	}
 
@@ -475,7 +486,11 @@ void imprimirMatriz(int** matriz){
 }
 
 int** transposeNormal(int** matriz){
-	int **matrix;
+	int** matrix;
+	cout<<"entre";
+	int arriba[3];
+	int medio[3];
+	int abajo[3];
 	matrix = new int*[3];
 	for (int i = 0; i < 3; ++i)
 	{
@@ -485,13 +500,40 @@ int** transposeNormal(int** matriz){
 	{
 		for (int j = 0; j < 3; ++j)
 		{
-			matrix[j][i]=matriz[i][j];
+			if(i==0){
+				arriba[j]=matriz[i][j];
+			}
+			if(i==1){
+				medio[j]=matriz[i][j];
+			}
+			if(i==2){
+				abajo[j]=matriz[i][j];
+			}
+		}
+	}
+	for (int i = 0; i < 3; ++i)
+	{
+		for (int j = 0; j < 3; ++j)
+		{
+			if(j==2){
+				matrix[i][j]=arriba[j];
+			}
+			if(j==1){
+				matrix[i][j]=medio[j];
+			}
+			if(j==0){
+				matrix[i][j]=abajo[j];
+			}
 		}
 	}
 	return matrix;
 }
 int** transposeInverse(int** matriz){
-	int **matrix;
+	int** matrix;
+	cout<<"entre";
+	int arriba[3];
+	int medio[3];
+	int abajo[3];
 	matrix = new int*[3];
 	for (int i = 0; i < 3; ++i)
 	{
@@ -501,7 +543,30 @@ int** transposeInverse(int** matriz){
 	{
 		for (int j = 0; j < 3; ++j)
 		{
-			matrix[i][j]=matriz[j][i];
+			if(i==0){
+				arriba[j]=matriz[i][j];
+			}
+			if(i==1){
+				medio[j]=matriz[i][j];
+			}
+			if(i==2){
+				abajo[j]=matriz[i][j];
+			}
+		}
+	}
+	for (int i = 0; i < 3; ++i)
+	{
+		for (int j = 0; j < 3; ++j)
+		{
+			if(j==2){
+				matrix[i][j]=abajo[j];
+			}
+			if(j==1){
+				matrix[i][j]=medio[j];
+			}
+			if(j==0){
+				matrix[i][j]=arriba[j];
+			}
 		}
 	}
 	return matrix;
